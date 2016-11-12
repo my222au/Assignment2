@@ -26,7 +26,7 @@ public class AlarmActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mediaPlayer.stop();
-                Intent  intent = new Intent(getApplicationContext(), AlarmMainActivity.class);
+                Intent  intent = new Intent(getBaseContext(), AlarmMainActivity.class);
                 startActivity(intent);
             }
         });

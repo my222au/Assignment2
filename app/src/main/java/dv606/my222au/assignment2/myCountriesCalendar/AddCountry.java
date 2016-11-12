@@ -23,9 +23,6 @@ public class AddCountry extends AppCompatActivity {
     private EditText mCountryInput;
     private Button mButton;
     private AlertDialog alert;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

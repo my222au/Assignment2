@@ -249,7 +249,7 @@ public class MyCountriesCalendar extends AppCompatActivity implements CalendarPr
     }
 
 
-    // using simplecusor to add the list view with binding between the values and the
+    // using simplecursor to add the list view with binding between the values and the widgets
     private void adaptToListview() {
 
         String[] bindFrom = {CalendarContract.Events.TITLE, CalendarContract.Events.DTSTART};
@@ -375,11 +375,11 @@ public class MyCountriesCalendar extends AppCompatActivity implements CalendarPr
     }
 
 
-    // Creates a new Calender by using synAdpater  and content resolver.
+    // Creates a new Calender by using syncAdpater  and content resolver.
 
     private void creatCountriesCalendar() {
 
-        Uri newCalendarUri;  // uri f
+        Uri newCalendarUri;
 
         ContentValues cValues = new ContentValues();
 
@@ -398,13 +398,6 @@ public class MyCountriesCalendar extends AppCompatActivity implements CalendarPr
 
     }
 
-    // DELETE IT LATER
-
-    public static void deleteCalendar(Context ctx, long l) {
-        ContentResolver cr = ctx.getContentResolver();
-        Uri calUri = ContentUris.withAppendedId(asSyncAdapter(CALENDARS_LIST_URI, ACCOUNT_TITLE, CalendarContract.ACCOUNT_TYPE_LOCAL), l);
-        cr.delete(calUri, null, null);
-    }
 
 
     private boolean checkCalendarExist() {
@@ -419,12 +412,7 @@ public class MyCountriesCalendar extends AppCompatActivity implements CalendarPr
                     getContentResolver().
                             query(CalendarContract.Calendars.CONTENT_URI, projection, CalendarContract.Calendars.VISIBLE + "=1", null, null);
             while (cursor.moveToNext()) {
-                calID = cursor.getLong(PROJ_CALENDARS_LIST_ID_INDEX);
-                String displayName = null;
-                String accountName = null;
-                String ownerName = null;
-
-                // Get the field values
+                // Get the field value
                 calID = cursor.getLong(PROJ_CALENDARS_LIST_ID_INDEX);
             }
 
