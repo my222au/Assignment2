@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:title="@string/list_pref_backgorund"
+        android:summary="@string/lsit_pref_backgorund_summary"
+        android:key="background"
+        android:defaultValue="false"
+        android:entries="@array/backgorund_array"
+        android:entryValues="@array/backgorund_color_values"/>
+
+
+
+
+
+</PreferenceScreen>

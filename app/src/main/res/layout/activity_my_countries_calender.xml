@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#4B576B"
+    android:id="@+id/activityLayout">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/myLinear"
+        android:background="#d2d2d2"
+        android:layout_marginTop="40dp"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/country_label"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:id="@+id/countryListLabel"
+            android:layout_weight="1"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/year_label"
+            android:textSize="30sp"
+            android:layout_marginRight="5dp"
+            android:textColor="#000000"
+            android:id="@+id/yearListLabel"
+            />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list"
+        android:layout_marginTop="80dp"
+        android:dividerHeight="1dp">
+
+    </ListView>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/Welcom_text"
+        android:textSize="20sp"
+        android:id="@+id/welcomeLabel"
+        android:layout_marginTop="5dp"
+        android:textColor="#ffffffff"
+        android:paddingLeft="30dp"
+        >
+
+
+    </TextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/level_up"
+        android:id="@+id/iconImageView"
+        android:layout_alignTop="@+id/welcomeLabel"
+        android:layout_toEndOf="@+id/welcomeLabel"
+        android:layout_alignBottom="@+id/welcomeLabel"/>
+
+
+
+
+</RelativeLayout>
